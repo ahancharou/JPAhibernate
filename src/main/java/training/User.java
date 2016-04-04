@@ -19,9 +19,8 @@ public class User extends Account {
     @Column(nullable = false, length = 40)
     private String lastName;
 
-    @OneToMany(fetch = FetchType.EAGER)
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinColumn(name = "user_fk")
-    @Cascade(value = CascadeType.SAVE_UPDATE)
     private List<Phone> phones;
 
     @Embedded

@@ -26,8 +26,6 @@ public class Runner {
 
         EntityTransaction transaction = em.getTransaction();
         transaction.begin();
-        em.persist(homePhone);
-        em.persist(mobile);
         em.persist(admin);
         transaction.commit();
 
